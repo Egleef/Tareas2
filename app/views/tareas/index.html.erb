@@ -1,11 +1,11 @@
-<h1>Tareas realizadas</h1>
+<h2>Tareas realizadas</h2>
 <div>
 <% @tareas.each do |tarea|%>
     <hr>
     <label> Title </label>
-    <h1><%= tarea.title%></h1>
+    <h5><%= tarea.title%></h5>
     </label> Description </label>
-    <h1><%= tarea.description%></h1>
+    <h5><%= tarea.description%></h5>
     
 <% end %>
 </div>
