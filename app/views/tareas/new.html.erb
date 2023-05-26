@@ -1,0 +1,15 @@
+<h1>Subir una tarea</h1>
+
+
+<%= form_with model: @tarea, url: tareas_path do |form| %>
+      <label> Title </label>
+    <%= form.text_field :title %>
+    </br>
+    </br>
+    <label> Description </label>
+    <%= form.text_field :description %>
+    </br>
+    </br>
+   
+    <%= form.submit 'Enviar' %>
+<% end %>
