@@ -1,4 +1,6 @@
 class TareasController < ApplicationController
+  http_basic_authenticate_with name: "eglee", password: "1234", except: :index
+
     def index
       @tareas = Tarea.all
     end
