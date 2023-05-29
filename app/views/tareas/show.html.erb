@@ -1,2 +1,15 @@
 <h1>Su Tarea ha sido Cargada</h1>
+<strong>Title: <%= @tarea.title  %></strong>
+</br>
+<strong>Description: <%= @tarea.description %> </strong>
+</br>
+
+
 <p>subida con exito!</p>
+
+<div>
+
+<%= link_to "Back to tarea", tarea_path %>
+
+<%= button_to "Destroy this tarea", @tarea, method: :delete %>
+<div>
