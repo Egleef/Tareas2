@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   get 'tareas/new'
   get 'tareas/create'
   get 'tareas/show'
-  resources :tareas
-
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
