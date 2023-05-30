@@ -1,16 +1,6 @@
 Rails.application.routes.draw do
-  get 'tareas/index'
-  get 'tareas/new'
-  get 'tareas/create'
-  get 'tareas/show'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :tareas, path: 'tarea', only: [:index, :create, :new, :show, :edit, :destroy, :update]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-
-
-  resources :tareas, path: 'tarea', only: [:index, :create, :new, :show]
   get 'user/index'
   get 'user/create'
   get 'user/show'
