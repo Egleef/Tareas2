@@ -1,13 +1,23 @@
 <h2>Tareas realizadas</h2>
-<div> 
-<% @tareas.each do |tarea|%>
-    <hr>
-    <label> Title </label>
-    <h5><%= tarea.title%></h5>
-    </label> Description </label>
-    <h5><%= tarea.description%></h5>
-    
-<% end %>
-</div>
-    
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tareas.each do |tarea| %>
+      <tr>
+        <td><%= tarea.title %></td>
+        <td><%= tarea.description %></td>
+        <td>
+          <%= link_to "Eliminar", tarea_path(tarea), method: :delete, data: { confirm: '¿Estás seguro de eliminar esta tarea?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to "Cargar tarea", new_tarea_path %>
